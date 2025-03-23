@@ -1,10 +1,7 @@
 version: '3'
 services:
-  web:
-    image: "nginx"
+  app:
+    image: mydockerhubuser/myapp:latest
     ports:
-      - "8081:80"
-  db:
-    image: "postgres:latest"
-    environment:
-      POSTGRES_PASSWORD: example
+      - "5000:5000"
+    restart: always
